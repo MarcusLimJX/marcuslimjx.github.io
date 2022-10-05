@@ -1,57 +1,226 @@
-<h1> Self-Bio </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Self-Bio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <style>
+        /* input[type='radio'] {
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        outline: none;
+        border: 3px solid gray;
+        }
+
+        input[type='radio']:before {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 60%;
+            margin: 20% auto;
+            border-radius: 50%;
+        }
+
+        input[type="radio"]:checked:before {
+                background: green;
+                
+            }
+        
+        input[type="radio"]:checked {
+        border-color:green;
+        } */
+
+        .heading {
+            text-align:center;
+            
+        }
+        .heading h1{
+            display: inline-block;
+
+            background-color: skyblue;
+            color: rebeccapurple;
+        }
+
+        h2{
+           empty-cells: show;
+        }
+
+        p{
+            text-align:center;
+        }
+
+    </style>
+</head>
 
 
 <body>
-    <img src="coding_meme_photo.jpg" alt="You wanted my photo? Fat hope :)">
+    <div class="container-fluid mx-auto heading">
+        <h1 class="heading"> Self-Bio </h1>
+        
+            <p>
+                <img src="coding_meme_photo.jpg" alt="You wanted my photo? Fat hope :)">
+            </p>
+        
+        
+        <p>
+            <h2>
+                Hi I'm Marcus :)
+            </h2>
+        </p>
 
-    <p>
-        <h2>
-            Hi I'm Marcus :)
-        </h2>
-    </p>
-    <form>
-        <table>
             
-            <tr>
-                <td> 
-                    Name: 
-                </td>
-                <td>
-                    <input type="text" name="name">
-                </td>
-            </tr>
-            <tr>
-                <td> 
-                    Relationship Status:
-                </td>
-                <td>
-                    <input type="radio" id="married" name="Relationship" value="Married">
-                    <label for="married">Married</label><br>
-                    <input type="radio" id="single" name="Relationship" value="Single">
-                    <label for="single">Single</label><br>
-                    <input type="radio" id="complicated" name="Relationship" value="Complicated">
-                    <label for="complicated">Complicated</label><br>
-                </td>
-            </tr>
-            <tr>
-                <td> 
-                    Favourite Fruits:
-                </td>
-                <td>
-                    <input type="checkbox" id="fruit1" name="fruit1" value="Apple">
-                    <label for="fruit1">Apple</label><br>
-                    <input type="checkbox" id="fruit2" name="fruit2" value="Orange">
-                    <label for="fruit2">Orange</label><br>
-                    <input type="checkbox" id="fruit3" name="fruit3" value="Banana">
-                    <label for="fruit3">Banana</label><br>
-                </td>
-            </tr>
-            <tr colspan="2" text-align="center">
-                <td>
-                     <input type="submit" value="Submit">
-                </td>
-            </tr>
-        </table>    
-    </form>
-</body>
+        <div class="container-fluid row justify-content-center mx-auto g-2">
+            <div class="row">
+                <div class="col-md my-2"> 
+                    <div class="form-floating w-100">
+                        <input type="text" class="form-control" id="name" value="Marcus Lim">
+                        <label for="name">Input Name Here</p>  
+                        </label>
+                    </div>
+                </div>
 
+                <div class="col-md my-2"> 
+                    <div class="form-floating">
+                        <select class="form-select" id="relationship_status" aria-label="Floating label select example">
+                            <option selected>Open this select menu</option>
+                            <option value="Married">Married</option>
+                            <option value="Single">Single</option>
+                            <option value="Complicated">Complicated</option>
+                        </select>
+                        <label for="relationship_status">
+                            <p>
+                                Relationship Status
+                            </p>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-md my-2">
+                    <div class="input-group">
+                        <div class="container-fluid p-0">
+                            <div class="input-group-text" required>
+                                <label>
+                                    <input class="form-check-input" type="checkbox" value="" aria-label="Checkbox for following text input" id="apple"> Apple
+                                </label>  
+                            </div>
+                            <div class="input-group-text">
+                                <label>
+                                    <input class="form-check-input" type="checkbox" value="" aria-label="Checkbox for following text input" id="orange"> Orange
+                                </label>
+                            </div>
+                            <div class="input-group-text">
+                                <label>
+                                    <input class="form-check-input" type="checkbox" value="" aria-label="Checkbox for following text input" id="banana"> Banana
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+            
+
+            
+
+
+                <!-- <tr>
+                    <td> 
+                        Relationship Status:
+                    </td>
+                    <td>
+                        <input type="radio" id="married" name="Relationship" value="Married">
+                        <label for="married">Married</label><br>
+                        <input type="radio" id="single" name="Relationship" value="Single">
+                        <label for="single">Single</label><br>
+                        <input type="radio" id="complicated" name="Relationship" value="Complicated">
+                        <label for="complicated">Complicated</label><br>
+                    </td>
+                </tr> -->
+                <!-- <tr>
+                    <td> 
+                        Favourite Fruits:
+                    </td>
+                    <td>
+                        <input type="checkbox" id="fruit1" name="fruit1" value="Apple">
+                        <label for="fruit1">Apple</label><br>
+                        <input type="checkbox" id="fruit2" name="fruit2" value="Orange">
+                        <label for="fruit2">Orange</label><br>
+                        <input type="checkbox" id="fruit3" name="fruit3" value="Banana">
+                        <label for="fruit3">Banana</label><br>
+                    </td>
+                </tr> -->
+
+                <!-- <tr colspan="2" text-align="center">
+                    <td>
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr> -->
+        </div>
+
+        <div class="container-fluid">
+            <button type="button" class="btn btn-success mt-4 w-100" onclick="personal_info()">Submit</button>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+
+    <script>
+
+        function personal_info(){
+            // name
+            let name = document.getElementById("name").value;
+            // console.log(name);
+
+            // rs status
+            let  relationship_status = document.getElementById("relationship_status").value;
+            // console.log(relationship_status)
+
+            // fruits
+            let apple = document.getElementById("apple").checked;
+            // console.log(apple)
+            let orange = document.getElementById("orange").checked;
+            let banana = document.getElementById("banana").checked;
+
+            fruits_array = [];
+            if (apple == true){
+                fruits_array.push("Apple");
+            }if (orange == true){
+                fruits_array.push("Orange");
+            }if (banana == true){
+                fruits_array.push("Banana");
+            }
+
+            fruits = fruits_array.join(", ");
+            // console.log(typeof(fruits));
+
+
+            if (fruits == ""){
+                alert("C'mon pick a fruit! They're healthy for you!")
+            }else{
+                if (relationship_status == "Married"){
+                alert("Hello, " + name + "! Aw man, looks like you're married! :( We could still eat your favourite fruits (" + fruits + ") together sometime? ;)")
+            }if (relationship_status == "Single") {
+                alert("Hello, " + name + "! Looks like you're single too :P Wanna eat your favourite fruits (" + fruits + ") together sometime? ;)")
+            }if (relationship_status == "Complicated") {
+                alert("Hello, " + name + "! Seems you're going through a tuff time. Wanna eat your favourite fruits (" + fruits + ") together sometime as a break from what you're going through? ;)")
+            }if (relationship_status == "Open this select menu") {
+                alert("dont be shy... pray tell your relationship status ;)")
+            }   
+            }
+            
+            
+        }
+    </script>
+
+
+</body>
+</html>
